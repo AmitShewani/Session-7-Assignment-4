@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 7.4 - Front End Web Development Fundamentals</title>
+	<style type="text/css">
+		/*Applying basic style to h1 and body contents*/
+		h1
+		{
+			color:blue;
+			font-size: 30px;
+			font-family: arial;
+			text-decoration: underline;
+		}
+		body
+		{
+			font-size: 18px;
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
+<h1>Tutorial to demonstrate the use of closures and nested functions</h1>
+<hr>
+<p>Click the button below to demonstrate the use of closures and nested functions</p>
+<!--On clicking the below button, callOuterFunction will be executed which will create an instance of outer function and this will internally call the inner function -->
+<br><input type="submit" name="submitBtn" onclick="callOuterFunction();"/>
+<script type="text/javascript">
+	function outerFunction()
+	{
+		var x=30;
+		function inner(x)
+		{
+			alert("My age is: "+x);
+		}
+		inner(x);
+	}
+	function callOuterFunction()
+	{
+	var user=new outerFunction();
+	}
+
+</script>
+</body>
+</html>
